@@ -89,7 +89,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'ListItem',
       item: {
         '@id': siteUrl,
-        name: 'Homepage',
+        name: 'Početna',
       },
       position: 1,
     },
@@ -97,7 +97,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'ListItem',
       item: {
         '@id': `${siteUrl}/about`,
-        name: 'About',
+        name: 'O nama',
       },
       position: 2,
     },
@@ -105,7 +105,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'ListItem',
       item: {
         '@id': `${siteUrl}/projects`,
-        name: 'About',
+        name: 'Projekti',
       },
       position: 3,
     },
@@ -113,7 +113,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'ListItem',
       item: {
         '@id': `${siteUrl}/instagram`,
-        name: 'About',
+        name: 'Instagram',
       },
       position: 4,
     },
@@ -184,7 +184,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
         <html lang={siteLanguage} />
         <meta name="description" content={seo.description} />
         <meta name="image" content={seo.image} />
-        <meta name="gatsby-starter" content="Gatsby Starter Portfolio Jodie" />
+        <meta name="3di-split" content="3Di Split - 3D printanje i dizajn" />
         {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
         {!individual && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
         {individual && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
