@@ -111,19 +111,19 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, three
           <Img fluid={firstProject.cover.childImageSharp.fluid} />
           <span>{firstProject.title}</span>
         </FirstProject>
-        <AboutUs to="/about" aria-label="Visit my about page">
+        <AboutUs to="/o-nama" aria-label="Saznaj više o nama">
           <Img fluid={aboutUs.childImageSharp.fluid} />
-          <span>About</span>
+          <span>O nama</span>
         </AboutUs>
         <ThreeProjects>
           {threeProjects.nodes.map(project => (
-            <GridItem to={project.slug} key={project.slug} aria-label={`View project "${project.title}"`}>
+            <GridItem to={project.slug} key={project.slug} aria-label={`Vidi projekt "${project.title}"`}>
               <Img fluid={project.cover.childImageSharp.fluid} />
               <span>{project.title}</span>
             </GridItem>
           ))}
         </ThreeProjects>
-        <Instagram to="/instagram" aria-label="See my Instagram pictures">
+        <Instagram to="/instagram" aria-label="Razgledaj naš Instagram">
           <Img fluid={instagram.childImageSharp.fluid} />
           <span>Instagram</span>
         </Instagram>

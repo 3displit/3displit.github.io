@@ -89,23 +89,23 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'ListItem',
       item: {
         '@id': siteUrl,
-        name: 'Homepage',
+        name: 'Početna',
       },
       position: 1,
     },
     {
       '@type': 'ListItem',
       item: {
-        '@id': `${siteUrl}/about`,
-        name: 'About',
+        '@id': `${siteUrl}/o-nama`,
+        name: 'O nama',
       },
       position: 2,
     },
     {
       '@type': 'ListItem',
       item: {
-        '@id': `${siteUrl}/projects`,
-        name: 'About',
+        '@id': `${siteUrl}/projekti`,
+        name: 'Projekti',
       },
       position: 3,
     },
@@ -113,7 +113,7 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
       '@type': 'ListItem',
       item: {
         '@id': `${siteUrl}/instagram`,
-        name: 'About',
+        name: 'Instagram',
       },
       position: 4,
     },
