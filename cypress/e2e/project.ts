@@ -2,10 +2,10 @@
 /// <reference types="cypress" />
 /// <reference types="@types/testing-library__cypress" />
 
-describe('projekt', () => {
+describe('project', () => {
   beforeEach(() => {
     cy.visit('/')
-      .getByLabelText(/view projekt "breakfast"/i)
+      .getByLabelText(/view project "breakfast"/i)
       .click({ force: true })
       .waitForRouteChange()
   })
@@ -19,7 +19,7 @@ describe('projekt', () => {
       .getByText(/The first meal of the day./i)
   })
   it('should have images', () => {
-    cy.getByAltText(/projekti-breakfast-003/i)
+    cy.getByAltText(/projects-breakfast-003/i)
   })
   it('should have a contact button', () => {
     cy.getByText(/contact us/i)

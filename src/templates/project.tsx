@@ -46,7 +46,7 @@ const PButton = styled(Button)<{ color: string }>`
 
 type PageProps = {
   data: {
-    projekt: {
+    project: {
       title_detail: string
       color: string
       category: string
@@ -84,7 +84,7 @@ type PageProps = {
   }
 }
 
-const Projekt: React.FunctionComponent<PageProps> = ({ data: { projekt, images } }) => {
+const Project: React.FunctionComponent<PageProps> = ({ data: { project, images } }) => {
   const categoryAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: 'translate3d(0, -30px, 0)' },
@@ -96,23 +96,23 @@ const Projekt: React.FunctionComponent<PageProps> = ({ data: { projekt, images }
   const imagesAnimation = useSpring({ config: config.slow, delay: 800, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <Layout color={projekt.color}>
+    <Layout color={project.color}>
       <SEO
-        pathname={projekt.slug}
-        title={`${projekt.title_detail} | Jodie`}
-        desc={projekt.desc}
-        node={projekt.parent}
-        banner={projekt.cover.childImageSharp.resize.src}
+        pathname={project.slug}
+        title={`${project.title_detail} | Jodie`}
+        desc={project.desc}
+        node={project.parent}
+        banner={project.cover.childImageSharp.resize.src}
         individual
       />
       <PBox py={10} px={[6, 6, 8, 10]}>
-        <Category style={categoryAnimation}>{projekt.category}</Category>
-        <animated.h1 style={titleAnimation}>{projekt.title_detail}</animated.h1>
+        <Category style={categoryAnimation}>{project.category}</Category>
+        <animated.h1 style={titleAnimation}>{project.title_detail}</animated.h1>
         <Description style={descAnimation}>
-          <div dangerouslySetInnerHTML={{ __html: projekt.desc }} />
+          <div dangerouslySetInnerHTML={{ __html: project.desc }} />
         </Description>
       </PBox>
-      <Content bg={projekt.color} py={10}>
+      <Content bg={project.color} py={10}>
         <PBox style={imagesAnimation} px={[6, 6, 8, 10]}>
           {images.nodes.map(image => (
             <Img alt={image.name} key={image.childImageSharp.fluid.src} fluid={image.childImageSharp.fluid} />
@@ -120,8 +120,8 @@ const Projekt: React.FunctionComponent<PageProps> = ({ data: { projekt, images }
         </PBox>
       </Content>
       <PBox style={{ textAlign: 'center' }} py={10} px={[6, 6, 8, 10]}>
-        <h2>Want to start your own projekt?</h2>
-        <PButton color={projekt.color} py={4} px={8}>
+        <h2>Want to start your own project?</h2>
+        <PButton color={project.color} py={4} px={8}>
           Contact Us
         </PButton>
       </PBox>
@@ -129,11 +129,11 @@ const Projekt: React.FunctionComponent<PageProps> = ({ data: { projekt, images }
   )
 }
 
-export default Projekt
+export default Project
 
 export const query = graphql`
-  query ProjektTemplate($slug: String!, $images: String!) {
-    projekt: projektiYaml(slug: { eq: $slug }) {
+  query ProjectTemplate($slug: String!, $images: String!) {
+    project: projectsYaml(slug: { eq: $slug }) {
       title_detail
       color
       category

@@ -10,7 +10,7 @@ import { ChildImageSharp } from '../types'
 
 type PageProps = {
   data: {
-    projekti: {
+    projects: {
       nodes: {
         title: string
         slug: string
@@ -31,7 +31,7 @@ const Area = styled(animated.div)`
   }
 `
 
-const Projekti: React.FunctionComponent<PageProps> = ({ data: { projekti } }) => {
+const Projects: React.FunctionComponent<PageProps> = ({ data: { projects } }) => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -42,10 +42,10 @@ const Projekti: React.FunctionComponent<PageProps> = ({ data: { projekti } }) =>
     <Layout color="#000">
       <SEO title="Projects | Jodie" />
       <Area style={pageAnimation}>
-        {projekti.nodes.map(projekt => (
-          <GridItem key={projekt.slug} to={projekt.slug} aria-label={`View projekt "${projekt.title}"`}>
-            <Img fluid={projekt.cover.childImageSharp.fluid} />
-            <span>{projekt.title}</span>
+        {projects.nodes.map(project => (
+          <GridItem key={project.slug} to={project.slug} aria-label={`View project "${project.title}"`}>
+            <Img fluid={project.cover.childImageSharp.fluid} />
+            <span>{project.title}</span>
           </GridItem>
         ))}
       </Area>
@@ -53,11 +53,11 @@ const Projekti: React.FunctionComponent<PageProps> = ({ data: { projekti } }) =>
   )
 }
 
-export default Projekti
+export default Projects
 
 export const query = graphql`
-  query Projekti {
-    projekti: allProjektiYaml {
+  query Projects {
+    projects: allProjectsYaml {
       nodes {
         title
         slug

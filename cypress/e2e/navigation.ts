@@ -7,13 +7,13 @@ describe('navigation', () => {
     cy.visit('/')
   })
 
-  it('link to projekti works', () => {
+  it('link to projects works', () => {
     cy.get('nav').within(() => {
-      cy.getByText(/projekti/i)
+      cy.getByText(/projects/i)
         .click({ force: true })
         .waitForRouteChange()
     })
-    cy.getByLabelText(/view projekt "Color"/i).assertRoute('/projekti')
+    cy.getByLabelText(/view project "Color"/i).assertRoute('/projects')
   })
   it('link to instagram works', () => {
     cy.get('nav').within(() => {

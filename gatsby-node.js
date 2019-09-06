@@ -10,12 +10,12 @@ const wrapper = promise =>
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const projektTemplate = require.resolve('./src/templates/projekt.tsx')
+  const projectTemplate = require.resolve('./src/templates/project.tsx')
 
   const result = await wrapper(
     graphql(`
       {
-        projekti: allProjektiYaml {
+        projects: allProjectsYaml {
           nodes {
             slug
             images
@@ -25,10 +25,10 @@ exports.createPages = async ({ graphql, actions }) => {
     `)
   )
 
-  result.data.projekti.nodes.forEach(node => {
+  result.data.projects.nodes.forEach(node => {
     createPage({
       path: node.slug,
-      component: projektTemplate,
+      component: projectTemplate,
       context: {
         slug: node.slug,
         images: `/${node.images}/`,
