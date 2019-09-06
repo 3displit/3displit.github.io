@@ -107,14 +107,23 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProjekt, three
     <Layout>
       <SEO />
       <Area style={pageAnimation}>
+<<<<<<< HEAD
         <FirstProjekt to={firstProjekt.slug} aria-label={`View projekt "${firstProjekt.title}"`}>
           <Img fluid={firstProjekt.cover.childImageSharp.fluid} />
           <span>{firstProjekt.title}</span>
         </FirstProjekt>
         <AboutUs to="/o-nama" aria-label="Saznaj više o nama">
+=======
+        <FirstProject to={firstProject.slug} aria-label={`View project "${firstProject.title}"`}>
+          <Img fluid={firstProject.cover.childImageSharp.fluid} />
+          <span>{firstProject.title}</span>
+        </FirstProject>
+        <AboutUs to="/about" aria-label="Visit my about page">
+>>>>>>> parent of c7bac26... Translation commit
           <Img fluid={aboutUs.childImageSharp.fluid} />
-          <span>O nama</span>
+          <span>About</span>
         </AboutUs>
+<<<<<<< HEAD
         <ThreeProjekti>
           {threeProjekti.nodes.map(projekt => (
             <GridItem to={projekt.slug} key={projekt.slug} aria-label={`Vidi projekt "${projekt.title}"`}>
@@ -124,6 +133,17 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProjekt, three
           ))}
         </ThreeProjekti>
         <Instagram to="/instagram" aria-label="Razgledaj naš Instagram">
+=======
+        <ThreeProjects>
+          {threeProjects.nodes.map(project => (
+            <GridItem to={project.slug} key={project.slug} aria-label={`View project "${project.title}"`}>
+              <Img fluid={project.cover.childImageSharp.fluid} />
+              <span>{project.title}</span>
+            </GridItem>
+          ))}
+        </ThreeProjects>
+        <Instagram to="/instagram" aria-label="See my Instagram pictures">
+>>>>>>> parent of c7bac26... Translation commit
           <Img fluid={instagram.childImageSharp.fluid} />
           <span>Instagram</span>
         </Instagram>

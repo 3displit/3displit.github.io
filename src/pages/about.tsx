@@ -13,7 +13,11 @@ const About = () => {
 
   return (
     <Layout>
+<<<<<<< HEAD:src/pages/o-nama.tsx
       <SEO title="O nama | 3Di SPLIT" desc="Hi. I'm LekoArts! You can visit my website or my other Gatsby projekti." />
+=======
+      <SEO title="About | Jodie" desc="Hi. I'm LekoArts! You can visit my website or my other Gatsby projects." />
+>>>>>>> parent of c7bac26... Translation commit:src/pages/about.tsx
       <AnimatedBox style={pageAnimation} py={[6, 6, 6, 8]} px={[6, 6, 8, 6, 8, 13]}>
         <h1>Hi. I'm LekoArts!</h1>
         <p>

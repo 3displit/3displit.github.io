@@ -30,8 +30,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'projekti',
-        path: `${__dirname}/content/projekti`,
+        name: 'projects',
+        path: `${__dirname}/content/projects`,
       },
     },
     {

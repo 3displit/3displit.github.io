@@ -40,7 +40,7 @@ const Projekti: React.FunctionComponent<PageProps> = ({ data: { projekti } }) =>
 
   return (
     <Layout color="#000">
-      <SEO title="Projekti | 3Di SPLIT" />
+      <SEO title="Projects | Jodie" />
       <Area style={pageAnimation}>
         {projekti.nodes.map(projekt => (
           <GridItem key={projekt.slug} to={projekt.slug} aria-label={`View projekt "${projekt.title}"`}>
