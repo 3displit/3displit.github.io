@@ -14,7 +14,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    project: './tsconfig.json'
+    projekt: './tsconfig.json'
   },
   env: {
     browser: true,

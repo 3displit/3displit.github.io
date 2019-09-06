@@ -10,12 +10,12 @@ import { ChildImageSharp } from '../types'
 
 type PageProps = {
   data: {
-    firstProject: {
+    firstprojekt: {
       title: string
       slug: string
       cover: ChildImageSharp
     }
-    threeProjects: {
+    threeprojekts: {
       nodes: {
         title: string
         slug: string
@@ -32,8 +32,8 @@ const Area = styled(animated.div)`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 35vw 40vw 25vw;
   grid-template-areas:
-    'first-project about-us about-us'
-    'three-projects three-projects three-projects'
+    'first-projekt about-us about-us'
+    'three-projekts three-projekts three-projekts'
     'instagram instagram instagram';
 
   @media (max-width: ${props => props.theme.breakpoints[3]}) {
@@ -41,9 +41,9 @@ const Area = styled(animated.div)`
     grid-template-rows: 35vw 30vw 30vw 25vw;
 
     grid-template-areas:
-      'first-project first-project about-us about-us'
-      'three-projects three-projects three-projects three-projects'
-      'three-projects three-projects three-projects three-projects'
+      'first-projekt first-projekt about-us about-us'
+      'three-projekts three-projekts three-projekts three-projekts'
+      'three-projekts three-projekts three-projekts three-projekts'
       'instagram instagram instagram instagram';
   }
 
@@ -52,10 +52,10 @@ const Area = styled(animated.div)`
     grid-template-rows: repeat(5, 38vw);
 
     grid-template-areas:
-      'first-project about-us'
-      'three-projects three-projects'
-      'three-projects three-projects'
-      'three-projects three-projects'
+      'first-projekt about-us'
+      'three-projekts three-projekts'
+      'three-projekts three-projekts'
+      'three-projekts three-projekts'
       'instagram instagram';
   }
 
@@ -64,25 +64,25 @@ const Area = styled(animated.div)`
     grid-template-rows: repeat(6, 50vw);
 
     grid-template-areas:
-      'first-project'
+      'first-projekt'
       'about-us'
-      'three-projects'
-      'three-projects'
-      'three-projects'
+      'three-projekts'
+      'three-projekts'
+      'three-projekts'
       'instagram';
   }
 `
 
-const FirstProject = styled(GridItem)`
-  grid-area: first-project;
+const Firstprojekt = styled(GridItem)`
+  grid-area: first-projekt;
 `
 
 const AboutUs = styled(GridItem)`
   grid-area: about-us;
 `
 
-const ThreeProjects = styled.div`
-  grid-area: three-projects;
+const Threeprojekts = styled.div`
+  grid-area: three-projekts;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
@@ -96,7 +96,7 @@ const Instagram = styled(GridItem)`
   grid-area: instagram;
 `
 
-const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, threeProjects, aboutUs, instagram } }) => {
+const Index: React.FunctionComponent<PageProps> = ({ data: { firstprojekt, threeprojekts, aboutUs, instagram } }) => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -107,22 +107,22 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, three
     <Layout>
       <SEO />
       <Area style={pageAnimation}>
-        <FirstProject to={firstProject.slug} aria-label={`View project "${firstProject.title}"`}>
-          <Img fluid={firstProject.cover.childImageSharp.fluid} />
-          <span>{firstProject.title}</span>
-        </FirstProject>
+        <Firstprojekt to={firstprojekt.slug} aria-label={`View projekt "${firstprojekt.title}"`}>
+          <Img fluid={firstprojekt.cover.childImageSharp.fluid} />
+          <span>{firstprojekt.title}</span>
+        </Firstprojekt>
         <AboutUs to="/o-nama" aria-label="Saznaj više o nama">
           <Img fluid={aboutUs.childImageSharp.fluid} />
           <span>O nama</span>
         </AboutUs>
-        <ThreeProjects>
-          {threeProjects.nodes.map(project => (
-            <GridItem to={project.slug} key={project.slug} aria-label={`Vidi projekt "${project.title}"`}>
-              <Img fluid={project.cover.childImageSharp.fluid} />
-              <span>{project.title}</span>
+        <Threeprojekts>
+          {threeprojekts.nodes.map(projekt => (
+            <GridItem to={projekt.slug} key={projekt.slug} aria-label={`Vidi projekt "${projekt.title}"`}>
+              <Img fluid={projekt.cover.childImageSharp.fluid} />
+              <span>{projekt.title}</span>
             </GridItem>
           ))}
-        </ThreeProjects>
+        </Threeprojekts>
         <Instagram to="/instagram" aria-label="Razgledaj naš Instagram">
           <Img fluid={instagram.childImageSharp.fluid} />
           <span>Instagram</span>
@@ -136,7 +136,7 @@ export default Index
 
 export const query = graphql`
   query Index {
-    firstProject: projectsYaml {
+    firstprojekt: projektsYaml {
       title
       slug
       cover {
@@ -147,7 +147,7 @@ export const query = graphql`
         }
       }
     }
-    threeProjects: allProjectsYaml(limit: 3, skip: 1) {
+    threeprojekts: allprojektsYaml(limit: 3, skip: 1) {
       nodes {
         title
         slug
