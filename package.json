@@ -20,8 +20,8 @@
     "server:open": "start-server-and-test develop http://localhost:8000 cy:open",
     "server:run": "start-server-and-test develop http://localhost:8000 cy:run",
     "server:ci": "start-server-and-test develop http://localhost:8000 cy:run:ci",
-    "test:compile": "tsc --project cypress/tsconfig.json",
-    "test:compile:watch": "tsc --watch --project cypress/tsconfig.json",
+    "test:compile": "tsc --projekt cypress/tsconfig.json",
+    "test:compile:watch": "tsc --watch --projekt cypress/tsconfig.json",
     "test": "npm-run-all -s test:compile server:run",
     "test:watch": "npm-run-all -p test:compile:watch server:open",
     "test:ci": "npm-run-all -s test:compile server:ci"
