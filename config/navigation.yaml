@@ -1,5 +1,3 @@
-- name: "Naruči 3D print"
-  link: "/order-3d-print"
 - name: "Projekti"
   link: "/projects"
 - name: "Instagram"

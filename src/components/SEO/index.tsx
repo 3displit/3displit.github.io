@@ -96,14 +96,6 @@ const SEO = ({ title, desc, banner, pathname, node, individual }: Props) => {
     {
       '@type': 'ListItem',
       item: {
-        '@id': `${siteUrl}/order-3d-print`,
-        name: 'Naruči 3D print',
-      },
-      position: 2,
-    },
-    {
-      '@type': 'ListItem',
-      item: {
         '@id': `${siteUrl}/about`,
         name: 'O nama',
       },
