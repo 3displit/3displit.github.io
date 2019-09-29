@@ -17,8 +17,22 @@ const About = () => {
       <AnimatedBox style={pageAnimation} py={[6, 6, 6, 8]} px={[6, 6, 8, 6, 8, 13]}>
         <h1>Pozdrav. Mi smo 3Di Split!</h1>
         <p>
-          You can visit my <a href="https://www.lekoarts.de/en">website</a> or my other{' '}
-          <a href="https://gatsby-starter-portfolio.netlify.com">Gatsby projects</a>.
+          Pružamo profesionalne usluge 3d printanja. 
+          Specijalizirani smo za printanje pomocu FDM/FFF tehnologije. 
+
+          Izradujemo funkcionalne prototipove i gotove proizvode. 
+        </p>
+        <p>
+          Pošaljite nam upit direktno na <a href="mailto:3displit@gmail.com">email adresu</a> ili putem <a href="https://3displit.com/contact">kontakt obrasca</a>.
+        </p>
+        <p>
+          Usluge koje nudimo:
+
+          - pripremu/prilagodbu modela za izradu
+
+          - 3D ispis
+
+          - naknadnu obradu
         </p>
       </AnimatedBox>
     </Layout>
