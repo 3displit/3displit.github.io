@@ -17,8 +17,8 @@ const About = () => {
       <AnimatedBox style={pageAnimation} py={[6, 6, 6, 8]} px={[6, 6, 8, 6, 8, 13]}>
         <h1>Pozdrav. Mi smo 3Di Split!</h1>
         <p>
-          Pružamo profesionalne usluge 3d printanja. 
-          Specijalizirani smo za printanje pomocu FDM/FFF tehnologije. 
+          Pružamo profesionalne usluge 3d printanja. <br />
+          Specijalizirani smo za printanje pomocu FDM/FFF tehnologije. <br />
 
           Izradujemo funkcionalne prototipove i gotove proizvode. 
         </p>
@@ -27,12 +27,12 @@ const About = () => {
         </p>
         <p>
           Usluge koje nudimo:
-
-          - pripremu/prilagodbu modela za izradu
-
-          - 3D ispis
-
-          - naknadnu obradu
+          
+          <ul>
+            <li>pripremu/prilagodbu modela za izradu</li>
+            <li>3D ispis</li>
+            <li>naknadnu obradu</li>
+          </ul> 
         </p>
       </AnimatedBox>
     </Layout>
