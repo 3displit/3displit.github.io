@@ -17,8 +17,8 @@ const About = () => {
       <AnimatedBox style={pageAnimation} py={[6, 6, 6, 8]} px={[6, 6, 8, 6, 8, 13]}>
         <h1>Pozdrav. Mi smo 3Di Split!</h1>
         <p>
-          Pružamo profesionalne usluge 3d printanja. <br>
-          Specijalizirani smo za printanje pomocu FDM/FFF tehnologije. <br>
+          Pružamo profesionalne usluge 3d printanja. <br />
+          Specijalizirani smo za printanje pomocu FDM/FFF tehnologije. <br />
 
           Izradujemo funkcionalne prototipove i gotove proizvode. 
         </p>
