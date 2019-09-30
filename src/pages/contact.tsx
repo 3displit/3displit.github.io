@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import { AnimatedBox } from '../elements'
 import SEO from '../components/SEO'
 
-const About = () => {
+const Contact = () => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -39,4 +39,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Contact
