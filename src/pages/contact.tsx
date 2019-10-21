@@ -45,8 +45,8 @@ const Contact = () => {
             
             <p>Pošaljite nam 3D model, fotografije ili slične materijale:</p>
             <p>
-                na email adresu: <a href="mailto:3displit@gmail.com?subject=Upit za 3D print - datoteke">3displit@gmail.com</a> </br>
-                ili </br>
+                na email adresu: <a href="mailto:3displit@gmail.com?subject=Upit za 3D print - datoteke">3displit@gmail.com</a> <br />
+                ili <br />
                 preko WeTransfer servisa: <a href="https://wetransfer.com/?to=3displit@gmail.com&msg=Upit%20za%203D%20print%20-%20datoteke" target="_blank">WeTransfer</a> 
             </p>
             
