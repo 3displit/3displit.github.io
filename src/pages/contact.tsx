@@ -121,7 +121,7 @@ const Contact = () => {
                 <textarea name="message"></textarea>
             </div>
             
-            <button type="submit">Pošalji upit</button>
+            <input type="submit" value="Pošalji upit" id="Form-submit"/>
             
         </form> 
        
