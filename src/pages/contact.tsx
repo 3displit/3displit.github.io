@@ -36,10 +36,10 @@ const Contact = () => {
             
             <p>Imam 3D model predmeta:</p>
             <div>
-                <input type="radio" id="3d-choice1" name="3dmodel" value="ne">
+                <input type="radio" id="3d-choice1" name="3dmodel" value="ne"/>
                 <label for="3d-choice1">Ne</label>
 
-                <input type="radio" id="3d-choice2" name="3dmodel" value="da">
+                <input type="radio" id="3d-choice2" name="3dmodel" value="da"/>
                 <label for="3d-choice2">Da</label>
             </div>
             
@@ -52,67 +52,67 @@ const Contact = () => {
             
             <p>Materijal:</p>
             <div>
-                <input type="radio" id="material-choice1" name="material" value="pla">
+                <input type="radio" id="material-choice1" name="material" value="pla"/>
                 <label for="material-choice1">PLA</label>
 
-                <input type="radio" id="material-choice2" name="material" value="petg">
+                <input type="radio" id="material-choice2" name="material" value="petg"/>
                 <label for="material-choice2">PETG</label>
             </div>
             
             <p>Boja:</p>
             <div>
-                <input type="radio" id="color-choice1" name="color" value="crna">
+                <input type="radio" id="color-choice1" name="color" value="crna"/>
                 <label for="color-choice1">Crna</label>
 
-                <input type="radio" id="color-choice2" name="color" value="bijela">
+                <input type="radio" id="color-choice2" name="color" value="bijela"/>
                 <label for="color-choice2">Bijela</label>
 
-                <input type="radio" id="color-choice3" name="color" value="Siva">
+                <input type="radio" id="color-choice3" name="color" value="Siva"/>
                 <label for="color-choice3">Siva</label>
 
-                <input type="radio" id="color-choice4" name="color" value="crvena">
+                <input type="radio" id="color-choice4" name="color" value="crvena"/>
                 <label for="color-choice4">Crvena</label>
 
-                <input type="radio" id="color-choice5" name="color" value="plava">
+                <input type="radio" id="color-choice5" name="color" value="plava"/>
                 <label for="color-choice5">Plava</label>
 
-                <input type="radio" id="color-choice6" name="color" value="zuta">
+                <input type="radio" id="color-choice6" name="color" value="zuta"/>
                 <label for="color-choice6">Žuta</label>
 
-                <input type="radio" id="color-choice7" name="color" value="ostalo">
+                <input type="radio" id="color-choice7" name="color" value="ostalo"/>
                 <label for="color-choice7">Ostalo (opišite u poruci u nastavku)</label>
             </div>
             
             <p>Kvaliteta ispisa:</p>
             <div>
-                <input type="radio" id="quality-choice1" name="quality" value="02mm">
+                <input type="radio" id="quality-choice1" name="quality" value="02mm"/>
                 <label for="quality-choice1">0.2 mm (200 mikrona)</label>
 
-                <input type="radio" id="quality-choice2" name="quality" value="03mm">
+                <input type="radio" id="quality-choice2" name="quality" value="03mm"/>
                 <label for="quality-choice2">0.3 mm (300 mikrona)</label>
             </div>
             
             <p>Unutrašnja popunjenost predmeta:</p>
             <div>
-                <input type="radio" id="infill-choice1" name="infill" value="0">
+                <input type="radio" id="infill-choice1" name="infill" value="0"/>
                 <label for="infill-choice1">0%</label>
 
-                <input type="radio" id="infill-choice2" name="infill" value="15">
+                <input type="radio" id="infill-choice2" name="infill" value="15"/>
                 <label for="infill-choice2">15%</label>
 
-                <input type="radio" id="infill-choice3" name="infill" value="25">
+                <input type="radio" id="infill-choice3" name="infill" value="25"/>
                 <label for="infill-choice3">25%</label>
 
-                <input type="radio" id="infill-choice4" name="infill" value="50">
+                <input type="radio" id="infill-choice4" name="infill" value="50"/>
                 <label for="infill-choice4">50%</label>
 
-                <input type="radio" id="infill-choice5" name="infill" value="75">
+                <input type="radio" id="infill-choice5" name="infill" value="75"/>
                 <label for="infill-choice5">75%</label>
 
-                <input type="radio" id="infill-choice6" name="infill" value="85">
+                <input type="radio" id="infill-choice6" name="infill" value="85"/>
                 <label for="infill-choice6">85%</label>
 
-                <input type="radio" id="infill-choice7" name="infill" value="100">
+                <input type="radio" id="infill-choice7" name="infill" value="100"/>
                 <label for="infill-choice7">100%</label>
             </div>
             
