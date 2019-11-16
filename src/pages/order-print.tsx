@@ -5,7 +5,7 @@ import Form from "../components/form"
 import { AnimatedBox } from '../elements'
 import SEO from '../components/SEO'
 
-const Order-print = () => {
+const Order_print = () => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -133,4 +133,4 @@ const Order-print = () => {
   )
 }
 
-export default Order-print
+export default Order_print
