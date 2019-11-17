@@ -16,10 +16,10 @@ const Order_print = () => {
     <Layout>
       <SEO title="Naruči print | 3Di Split" desc="Pozdrav. Mi smo 3Di Split! Ostvarite vaše ideje uz 3D print i dizajn." />
       <AnimatedBox style={pageAnimation} py={[6, 6, 6, 8]} px={[6, 6, 8, 6, 8, 13]}>
-        <div class="{Form.container}">
+        <div class="container">
         <h1>Naruči print</h1>
         
-        <form id="{Form.3DPrintForm}" action="https://hooks.zapier.com/hooks/catch/5814268/o2wmp0y/" type="POST">
+        <form id="3DPrintForm" action="https://hooks.zapier.com/hooks/catch/5814268/o2wmp0y/" type="POST">
         
             <div>
                 <label for="name">Ime i prezime/Naziv tvrtke</label>
