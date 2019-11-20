@@ -1,5 +1,3 @@
-- name: "Naruči print"
-  link: "/order-print"
 - name: "Projekti"
   link: "/projects"
 - name: "Instagram"

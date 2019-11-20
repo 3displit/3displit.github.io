@@ -5,7 +5,7 @@ import Form from "../components/form"
 import { AnimatedBox } from '../elements'
 import SEO from '../components/SEO'
 
-const Order_print = () => {
+const Order_3d_modeling = () => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -14,10 +14,10 @@ const Order_print = () => {
 
   return (
     <Layout>
-      <SEO title="Naruči print | 3Di Split" desc="Pozdrav. Mi smo 3Di Split! Ostvarite vaše ideje uz 3D print i dizajn." />
+      <SEO title="Naruči 3D modeliranje | 3Di Split" desc="Mi smo 3Di Split! Ostvarite ideje uz 3D print i modeliranje." />
       <AnimatedBox style={pageAnimation} py={[6, 6, 6, 8]} px={[6, 6, 8, 6, 8, 13]}>
         <div class="container">
-        <h1>Naruči print</h1>
+        <h1>Naruči 3D modeliranje</h1>
         
         <form id="3DPrintForm" action="https://hooks.zapier.com/hooks/catch/5814268/o2wmp0y/" type="POST">
         
@@ -133,4 +133,4 @@ const Order_print = () => {
   )
 }
 
-export default Order_print
+export default Order_3d_modeling

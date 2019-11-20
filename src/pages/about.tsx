@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     <Layout>
-      <SEO title="O nama | 3Di Split" desc="Pozdrav. Mi smo 3Di Split! Ostvarite vaše ideje uz 3D print i dizajn." />
+      <SEO title="O nama | 3Di Split" desc="Mi smo 3Di Split! Ostvarite ideje uz 3D print i modeliranje." />
       <AnimatedBox style={pageAnimation} py={[6, 6, 6, 8]} px={[6, 6, 8, 6, 8, 13]}>
         <h1>Pozdrav. Mi smo 3Di Split!</h1>
         <p>

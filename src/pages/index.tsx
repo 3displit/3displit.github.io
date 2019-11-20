@@ -10,20 +10,13 @@ import { ChildImageSharp } from '../types'
 
 type PageProps = {
   data: {
-    firstProject: {
-      title: string
-      slug: string
-      cover: ChildImageSharp
-    }
-    threeProjects: {
-      nodes: {
-        title: string
-        slug: string
-        cover: ChildImageSharp
-      }[]
-    }
+    order3DPrint: ChildImageSharp
+    order3DModeling: ChildImageSharp
     aboutUs: ChildImageSharp
     instagram: ChildImageSharp
+    projects: ChildImageSharp
+    contact: ChildImageSharp
+    blog: ChildImageSharp
   }
 }
 
@@ -32,19 +25,19 @@ const Area = styled(animated.div)`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 35vw 40vw 25vw;
   grid-template-areas:
-    'first-project about-us about-us'
-    'three-projects three-projects three-projects'
-    'instagram instagram instagram';
+    'order-3d-print order-3d-modeling about-us'
+    'instagram projects projects'
+    'contact blog blog';
 
   @media (max-width: ${props => props.theme.breakpoints[3]}) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 35vw 30vw 30vw 25vw;
 
     grid-template-areas:
-      'first-project first-project about-us about-us'
-      'three-projects three-projects three-projects three-projects'
-      'three-projects three-projects three-projects three-projects'
-      'instagram instagram instagram instagram';
+      'order-3d-print order-3d-print about-us about-us'
+      'order-3d-print order-3d-print projects projects'
+      'instagram instagram projects projects'
+      'contact contact blog blog';
   }
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
@@ -52,51 +45,57 @@ const Area = styled(animated.div)`
     grid-template-rows: repeat(5, 38vw);
 
     grid-template-areas:
-      'first-project about-us'
-      'three-projects three-projects'
-      'three-projects three-projects'
-      'three-projects three-projects'
-      'instagram instagram';
+      'order-3d-print order-3d-modeling'
+      'about-us instagram'
+      'projects projects'
+      'contact contact';
+      'blog blog';
   }
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 50vw);
+    grid-template-rows: repeat(7, 50vw);
 
     grid-template-areas:
-      'first-project'
+      'order-3d-print'
+      'order-3d-modeling'
       'about-us'
-      'three-projects'
-      'three-projects'
-      'three-projects'
-      'instagram';
+      'instagram'
+      'projects'
+      'contact'
+      'blog';
   }
 `
 
-const FirstProject = styled(GridItem)`
-  grid-area: first-project;
+const Order3DPrint = styled(GridItem)`
+  grid-area: order-3d-print;
+`
+
+const Order3DModeling = styled(GridItem)`
+  grid-area: order-3d-modeling;
 `
 
 const AboutUs = styled(GridItem)`
   grid-area: about-us;
 `
 
-const ThreeProjects = styled.div`
-  grid-area: three-projects;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  @media (max-width: ${props => props.theme.breakpoints[1]}) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-`
-
 const Instagram = styled(GridItem)`
   grid-area: instagram;
 `
 
-const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, threeProjects, aboutUs, instagram } }) => {
+const Projects = styled(GridItem)`
+  grid-area: projects;
+`
+
+const Contact = styled(GridItem)`
+  grid-area: contact;
+`
+
+const Blog = styled(GridItem)`
+  grid-area: blog;
+`
+
+const Index: React.FunctionComponent<PageProps> = ({ data: { order3DPrint, order3DModeling, aboutUs, instagram, projects, contact, blog } }) => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -107,26 +106,34 @@ const Index: React.FunctionComponent<PageProps> = ({ data: { firstProject, three
     <Layout>
       <SEO />
       <Area style={pageAnimation}>
-        <FirstProject to={firstProject.slug} aria-label={`Vidi projekt "${firstProject.title}"`}>
-          <Img fluid={firstProject.cover.childImageSharp.fluid} />
-          <span>{firstProject.title}</span>
-        </FirstProject>
+        <Order3DPrint to="/order-3d-print" aria-label="Naruči 3D print">
+          <Img fluid={order3DPrint.childImageSharp.fluid} />
+          <span>Naruči 3D print</span>
+        </Order3DPrint>
+        <Order3DModeling to="/order-3d-modeling" aria-label="Naruči 3D modeliranje">
+          <Img fluid={order3DModeling.childImageSharp.fluid} />
+          <span>Naruči 3D modeliranje</span>
+        </Order3DModeling>
         <AboutUs to="/about" aria-label="Saznaj više o nama">
           <Img fluid={aboutUs.childImageSharp.fluid} />
           <span>O nama</span>
         </AboutUs>
-        <ThreeProjects>
-          {threeProjects.nodes.map(project => (
-            <GridItem to={project.slug} key={project.slug} aria-label={`Vidi projekt "${project.title}"`}>
-              <Img fluid={project.cover.childImageSharp.fluid} />
-              <span>{project.title}</span>
-            </GridItem>
-          ))}
-        </ThreeProjects>
         <Instagram to="/instagram" aria-label="Razgledaj Instagram">
           <Img fluid={instagram.childImageSharp.fluid} />
           <span>Instagram</span>
         </Instagram>
+        <Projects to="/projects" aria-label="Vidi projekte">
+          <Img fluid={projects.childImageSharp.fluid} />
+          <span>Projekti</span>
+        </Projects>
+        <Contact to="/contact" aria-label="Kontakt">
+          <Img fluid={contact.childImageSharp.fluid} />
+          <span>Kontakt</span>
+        </Contact>
+        <Blog to="/blog" aria-label="Blog">
+          <Img fluid={blog.childImageSharp.fluid} />
+          <span>Blog</span>
+        </Blog>
       </Area>
     </Layout>
   )
@@ -136,27 +143,17 @@ export default Index
 
 export const query = graphql`
   query Index {
-    firstProject: projectsYaml {
-      title
-      slug
-      cover {
-        childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+    order3DPrint: file(sourceInstanceName: { eq: "images" }, name: { eq: "order-3d-print" }) {
+      childImageSharp {
+        fluid(quality: 95, maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    threeProjects: allProjectsYaml(limit: 3, skip: 1) {
-      nodes {
-        title
-        slug
-        cover {
-          childImageSharp {
-            fluid(quality: 95, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
+    order3DModeling: file(sourceInstanceName: { eq: "images" }, name: { eq: "order-3d-modeling" }) {
+      childImageSharp {
+        fluid(quality: 95, maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -168,6 +165,27 @@ export const query = graphql`
       }
     }
     instagram: file(sourceInstanceName: { eq: "images" }, name: { eq: "instagram" }) {
+      childImageSharp {
+        fluid(quality: 95, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    projects: file(sourceInstanceName: { eq: "images" }, name: { eq: "projects" }) {
+      childImageSharp {
+        fluid(quality: 95, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    contact: file(sourceInstanceName: { eq: "images" }, name: { eq: "contact" }) {
+      childImageSharp {
+        fluid(quality: 95, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    blog: file(sourceInstanceName: { eq: "images" }, name: { eq: "blog" }) {
       childImageSharp {
         fluid(quality: 95, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp

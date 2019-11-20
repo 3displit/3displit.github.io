@@ -5,7 +5,7 @@ import Form from "../components/form"
 import { AnimatedBox } from '../elements'
 import SEO from '../components/SEO'
 
-const Contact = () => {
+const Order_3d_print = () => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -14,10 +14,10 @@ const Contact = () => {
 
   return (
     <Layout>
-      <SEO title="Kontakt | 3Di Split" desc="Mi smo 3Di Split! Ostvarite ideje uz 3D print i modeliranje." />
+      <SEO title="Naruči 3D print | 3Di Split" desc="Mi smo 3Di Split! Ostvarite ideje uz 3D print i modeliranje." />
       <AnimatedBox style={pageAnimation} py={[6, 6, 6, 8]} px={[6, 6, 8, 6, 8, 13]}>
         <div class="container">
-        <h1>Contact</h1>
+        <h1>Naruči 3D print</h1>
         
         <form id="3DPrintForm" action="https://hooks.zapier.com/hooks/catch/5814268/o2wmp0y/" type="POST">
         
@@ -126,23 +126,11 @@ const Contact = () => {
             <input type="submit" value="Pošalji upit" id="Form-submit"/>
             
         </form> 
-       
-        <form name="Contact Form" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="Contact Form" />
-            <div>
-                <label>Your Email:</label>
-                <input type="email" name="email" />
-            </div>
-            <div>
-                <label>Message:</label>
-                <textarea name="message" />
-            </div>
-            <button type="submit">Send</button>
-        </form>
+        
         </div>
       </AnimatedBox>
     </Layout>
   )
 }
 
-export default Contact
+export default Order_3d_print
