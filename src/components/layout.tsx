@@ -7,6 +7,9 @@ import { Box, Flex } from '../elements'
 import theme from '../../config/theme'
 import reset from '../styles/reset'
 import Logo from './logo'
+import IconInstagram from './icon-instagram'
+import IconFacebook from './icon-facebook'
+import IconEmail from './icon-email'
 
 const GlobalStyles = createGlobalStyle`
   *::before,
@@ -228,8 +231,8 @@ const Layout = ({ children, color }: LayoutProps) => {
               alignItems={['center', 'center', 'center', 'flex-start']}
               justifyContent="space-between"
             >
-              <Box width={['3rem', '4rem', '5rem', '6rem']}>
-                <Link to="/" aria-label="LekoArts, Back to Home">
+              <Box width={['3rem', '4rem', '8rem', '15rem']}>
+                <Link to="/" aria-label="3Di SPLIT, Povratak na Glavnu">
                   <Logo />
                 </Link>
               </Box>
@@ -251,10 +254,25 @@ const Layout = ({ children, color }: LayoutProps) => {
           </SideBarInner>
           <Main>{children}</Main>
           <Footer color={color}>
-            <Box p={[6, 6, 8]} fontSize={0}>
-              Starter by <a href="https://www.lekoarts.de/en">LekoArts</a>.<br />
-              <a href="https://github.com/LekoArts/gatsby-starter-portfolio-jodie">Source</a>.
-            </Box>
+            <div style={{ width: '100%' }}>
+              <Box display="flex" flexDirection={['row', 'row', 'row', 'row']} p={[6, 6, 8]} fontSize={0}>
+                <Box width={['3rem', '4rem', '5rem', '3rem']}>
+                  <a href="https://www.instagram.com/3di_split/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <IconInstagram />
+                  </a>
+                </Box>
+                <Box width={['3rem', '4rem', '5rem', '3rem']}>
+                  <a href="https://www.facebook.com/3displit/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <IconFacebook />
+                  </a>
+                </Box>
+                <Box width={['3rem', '4rem', '5rem', '3rem']}>
+                  <a href="mailto:3displit@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="E-Mail">
+                    <IconEmail />
+                  </a>
+                </Box>
+              </Box>
+            </div>
           </Footer>
         </Wrapper>
       </>
